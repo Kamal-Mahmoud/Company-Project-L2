@@ -1,0 +1,6 @@
+@extends("front.master")
+@section('title' , 'Index')
+@section('home-active', 'active')
+@section('about-active', 'active')
+@section('service-active', 'active')
+@section('contact-active', 'active')
