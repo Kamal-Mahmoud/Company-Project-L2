@@ -15,33 +15,32 @@
                             <polygon class="st0" points="96,69 33,69 42,51 105,51 	" />
                             <polygon class="st0" points="78,33 15,33 24,15 87,15 	" />
                         </g>
-
-
                     </svg>
                 </a>
                 <h1 class="mb-3 h6">Sign in</h1>
+                <x-auth-session-status class="mb-4" :status="session('status')" />
                 <div class="form-group">
                     <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" name="email" value="{{ old('email') }}"
+                    <input type="email" id="inputEmail" name="email" value="{{ old('email') }}" placeholder="Email address"
                         class="form-control form-control-lg" placeholder="Email address" required autofocus>
                     @error('email')
-                        <div class="text-danger">{{ $message }}</div>
+                        <div class="mt-2 text-danger">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" name="password" class="form-control form-control-lg"
+                    <input type="password" id="inputPassword" name="password" class="form-control form-control-lg" placeholder="Password"
                         placeholder="Password" required>
                     @error('password')
-                        <div class="text-danger">{{ $message }}</div>
+                        <div class="mt-2 text-danger">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="mb-3 checkbox">
                     <label>
-                        <input type="checkbox" name="remember" value="1"> Stay logged in </label>
+                        <input type="checkbox" name="remember" value="remember-me"> Stay logged in </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Let me in</button>
-                <p class="mt-5 mb-3 text-muted">© 2020</p>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                <p class="mt-5 mb-3 text-muted">© 2026</p>
             </form>
         </div>
     </div>
