@@ -1,5 +1,5 @@
 @extends('admin.auth.master')
-@section('title', 'Login')
+@section('title', __('keywords.login'))
 
 @section('content')
     <div class="wrapper vh-100">
@@ -17,30 +17,30 @@
                         </g>
                     </svg>
                 </a>
-                <h1 class="mb-3 h6">Sign in</h1>
+                <h1 class="mb-3 h6">{{ __('keywords.sign_in') }}</h1>
                 <x-auth-session-status class="mb-4" :status="session('status')" />
                 <div class="form-group">
-                    <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" name="email" value="{{ old('email') }}" placeholder="Email address"
-                        class="form-control form-control-lg" placeholder="Email address" required autofocus>
+                    <label for="inputEmail" class="sr-only">{{ __('keywords.email') }}</label>
+                    <input type="email" id="inputEmail" name="email" value="{{ old('email') }}" placeholder="{{ __('keywords.email') }}"
+                        class="form-control form-control-lg" placeholder="{{ __('keywords.email') }}" required autofocus>
                     @error('email')
                         <div class="mt-2 text-danger">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" name="password" class="form-control form-control-lg" placeholder="Password"
-                        placeholder="Password" required>
+                    <label for="inputPassword" class="sr-only">{{ __('keywords.password') }}</label>
+                    <input type="password" id="inputPassword" name="password" class="form-control form-control-lg" placeholder="{{ __('keywords.password') }}"
+                        placeholder="{{ __('keywords.password') }}" required>
                     @error('password')
                         <div class="mt-2 text-danger">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="mb-3 checkbox">
                     <label>
-                        <input type="checkbox" name="remember" value="remember-me"> Stay logged in </label>
+                        <input type="checkbox" name="remember" value="remember-me"> {{ __('keywords.remember') }} </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-                <p class="mt-5 mb-3 text-muted">© 2026</p>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">{{ __('keywords.login') }}</button>
+
             </form>
         </div>
     </div>
