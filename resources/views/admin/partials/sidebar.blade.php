@@ -34,6 +34,27 @@
                       label="keywords.services" />
 
               </ul>
+              <ul class="mb-2 navbar-nav flex-fill w-100">
+                  <x-sidebar-tap routeName="admin.features.index" iconClass="fe-briefcase" label="keywords.features" />
 
+              </ul>
+              <ul class="mb-2 navbar-nav flex-fill w-100">
+                  <x-sidebar-tap routeName="admin.messages.index" iconClass="fe-mail" label="keywords.messages" />
+
+              </ul>
+              <ul class="mb-2 navbar-nav flex-fill w-100">
+                  <x-sidebar-tap routeName="admin.subscribers.index" iconClass="fe-users"
+                      label="keywords.subscribers" />
+              </ul>
+
+              <ul class="mb-2 navbar-nav flex-fill w-100">
+                  <x-sidebar-tap routeName="admin.testimonials.index" iconClass="fe-message-square"
+                      label="keywords.testmonials" />
+              </ul>
+
+              <ul class="mb-2 navbar-nav flex-fill w-100">
+                  <x-sidebar-tap routeName="admin.settings.index" iconClass="fe-settings"
+                      label="keywords.settings" />
+              </ul>
           </nav>
       </aside>

@@ -14,7 +14,7 @@ class ServiceController extends Controller
     public function index()
     {
         return view('admin.services.index', [
-            'services' => Service::paginate(10),
+            'services' => Service::paginate(config('pagination.count')),
         ]);
     }
 
